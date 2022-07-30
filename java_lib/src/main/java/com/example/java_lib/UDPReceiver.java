@@ -15,13 +15,13 @@ public class UDPReceiver
 
             socket.receive(packet);
 
-            socket.close();
-
             System.out.println("Receive OK");
 
             byte[] data = packet.getData();
 
             System.out.println(packet.getAddress().getHostAddress() + " : " + new String(data, 0, data.length));
+
+            socket.close();
         }
         catch (Exception e)
         {
