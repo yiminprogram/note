@@ -9,12 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class ViewPagerFragment extends Fragment
+public class SlideViewPagerFragment extends Fragment
 {
     private View mainView;
     private String content;
 
-    public ViewPagerFragment(String content)
+    public SlideViewPagerFragment(String content)
     {
         this.content = content;
     }
@@ -25,7 +25,7 @@ public class ViewPagerFragment extends Fragment
     {
         if (mainView == null)
         {
-            mainView = inflater.inflate(R.layout.fragment_view_pager, container, false);
+            mainView = inflater.inflate(R.layout.slide_view_pager_fragment, container, false);
 
             TextView contentView = mainView.findViewById(R.id.tab_content);
             contentView.setText(content);

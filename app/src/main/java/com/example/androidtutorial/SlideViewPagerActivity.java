@@ -11,12 +11,11 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
-import android.view.inspector.StaticInspectionCompanionProvider;
 import android.widget.TextView;
 
 import java.util.LinkedList;
 
-public class ViewPagerActivity extends AppCompatActivity
+public class SlideViewPagerActivity extends AppCompatActivity
 {
     private ViewPager viewPager;
     private TextView[] titleViews = new TextView[4];
@@ -24,7 +23,7 @@ public class ViewPagerActivity extends AppCompatActivity
     private int[] titles = {R.id.title0, R.id.title1, R.id.title2, R.id.title3};
     private int[] lines = {R.id.line0, R.id.line1, R.id.line2, R.id.line3};
     private MyPagerAdapter myPagerAdapter;
-    private LinkedList<ViewPagerFragment> pages = new LinkedList<>();
+    private LinkedList<SlideViewPagerFragment> pages = new LinkedList<>();
     private LinkedList<String> headers = new LinkedList<>();
     private int startIndex, nowItem;
 
@@ -32,7 +31,7 @@ public class ViewPagerActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_pager);
+        setContentView(R.layout.slide_view_pager);
 
         viewPager = findViewById(R.id.view_pager);
 
@@ -146,7 +145,7 @@ public class ViewPagerActivity extends AppCompatActivity
         for (int i = 0; i < 4; i++)
         {
             String pageName = "Page" + (i + 1);
-            ViewPagerFragment viewPagerFragment = new ViewPagerFragment(pageName);
+            SlideViewPagerFragment viewPagerFragment = new SlideViewPagerFragment(pageName);
             pages.add(viewPagerFragment);
             headers.add(pageName);
         }

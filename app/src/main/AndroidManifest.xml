@@ -18,7 +18,7 @@
         android:theme="@style/Theme.AndroidTutorial"
         tools:targetApi="31">
         <activity
-            android:name=".ViewPagerActivity"
+            android:name=".SlideViewPagerActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
