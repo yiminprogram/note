@@ -23,7 +23,7 @@ public class LiveDataViewModelActivity extends AppCompatActivity
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.jetpack_activity_live_data_viewmodel);
+        setContentView(R.layout.activity_jetpack_live_data);
 
         mText = findViewById(R.id.text_view);
         mBtn1 = findViewById(R.id.button1);
